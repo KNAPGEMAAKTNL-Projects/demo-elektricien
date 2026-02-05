@@ -1,0 +1,157 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactCta from "../../components/ContactCta.astro";
+import { Lightbulb, Sun, Smartphone, Check } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/electrical-measurement-tools.webp";
+---
+
+<Layout
+    title="Verlichting & Lichtplan Culemborg | Van der Veen Elektrotechniek"
+>
+    <section class="bg-surface-dark pt-32 pb-16">
+        <div class="container-custom grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="text-accent font-bold tracking-wider uppercase text-xs mb-2 block"
+                    >Sfeer & Comfort</span
+                >
+                <h1
+                    class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+                >
+                    Lichtplan & Installatie
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Verlichting bepaalt de sfeer in huis. Wij helpen met een
+                    doordacht lichtplan, leveren hoogwaardige LED-spots en
+                    monteren alles vakkundig. Ook voor slimme verlichting
+                    (Hue/Zigbee).
+                </p>
+                <div class="flex gap-4">
+                    <a href="/offerte/?dienst=verlichting" class="btn-primary">Adviesgesprek</a>
+                </div>
+            </div>
+            <div
+                class="relative h-[400px] bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-white"
+            >
+                <Image
+                    src={heroImage}
+                    alt="Professionele verlichting installatie werkzaamheden"
+                    width={800}
+                    height={600}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="py-20 bg-surface">
+        <div class="container-custom grid lg:grid-cols-3 gap-12">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-12">
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Van bouwlamp naar sfeerlicht
+                    </h2>
+                    <p class="text-slate-600 mb-6">
+                        Vaak wordt er bij de bouw te weinig nagedacht over
+                        lichtpunten. Het resultaat: donkere hoeken of ongezellig
+                        fel licht. Wij boren nieuwe spotgaten, frezen leidingen
+                        en zorgen voor perfect dimbaar licht op de juiste
+                        plekken.
+                    </p>
+                </div>
+
+                <div class="grid gap-6">
+                    <div
+                        class="flex gap-4 items-start p-6 bg-surface-dark rounded-xl border border-border"
+                    >
+                        <div class="bg-white p-3 rounded-full shadow-sm">
+                            <Sun class="w-6 h-6 text-accent" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-primary text-lg">
+                                LED Inbouwspots
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-1">
+                                Wij leveren kantelbare, dimbare LED spots met
+                                een hoge kleurweergave (CRI 90+). Perfect voor
+                                keukens en woonkamers.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="flex gap-4 items-start p-6 bg-surface-dark rounded-xl border border-border"
+                    >
+                        <div class="bg-white p-3 rounded-full shadow-sm">
+                            <Smartphone class="w-6 h-6 text-primary" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-primary text-lg">
+                                Domotica & Smart Home
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-1">
+                                Wilt u het licht bedienen met uw telefoon? Wij
+                                installeren slimme dimmers die werken met
+                                Philips Hue, Google Home of Apple Homekit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Buitenverlichting
+                    </h2>
+                    <p class="text-slate-600">
+                        Ook voor de tuin leggen wij veilige grondkabels en
+                        monteren wij wandlampen, prikspots of
+                        schuttingverlichting. Veiligheid en sfeer in één.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <div class="bg-primary text-white p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-lg mb-4">Onze Service</h3>
+                    <ul class="space-y-4 mb-6">
+                        <li
+                            class="flex items-center gap-3 text-sm text-slate-300"
+                        >
+                            <Check class="w-4 h-4 text-accent" />
+                            Gratis lichtplan advies aan huis
+                        </li>
+                        <li
+                            class="flex items-center gap-3 text-sm text-slate-300"
+                        >
+                            <Check class="w-4 h-4 text-accent" />
+                            Boren met stofafzuiging
+                        </li>
+                        <li
+                            class="flex items-center gap-3 text-sm text-slate-300"
+                        >
+                            <Check class="w-4 h-4 text-accent" />
+                            5 jaar garantie op LED spots
+                        </li>
+                    </ul>
+                    <a
+                        href="/offerte/?dienst=verlichting"
+                        class="block w-full text-center bg-white text-primary hover:bg-slate-100 font-bold py-3 rounded-lg transition-colors"
+                        >Afspraak Maken</a
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

@@ -1,0 +1,276 @@
+---
+import {
+    Zap,
+    Server,
+    Lightbulb,
+    Home,
+    ArrowRight,
+    Sun,
+    Plug,
+} from "lucide-react";
+import { Image } from "astro:assets";
+import imgGroepenkast from "../assets/images/worker-working-on-electrical-box.webp";
+import imgLaadpaal from "../assets/images/electrician-installing-car-charger.webp";
+import imgRenovatie from "../assets/images/loose-hanging-cables.webp";
+import imgVerlichting from "../assets/images/electrical-measurement-tools.webp";
+import imgZonnepanelen from "../assets/images/electrician-installing-solar-panels.webp";
+import imgInductie from "../assets/images/hands-holding-open-cables.webp";
+---
+
+<section id="diensten" class="py-20 bg-surface-dark">
+    <div class="container-custom">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2
+                class="text-3xl md:text-4xl font-bold font-heading text-primary mb-4"
+            >
+                Vakwerk waar u op kunt bouwen
+            </h2>
+            <p class="text-slate-600">
+                Wij zijn gespecialiseerd in het verbeteren en veilig maken van
+                woninginstallaties. Van kleine aanpassingen tot complete
+                renovaties.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1: Groepenkast -->
+            <a
+                href="/diensten/groepenkast/"
+                class="block bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border border-border"
+            >
+                <div class="h-48 overflow-hidden">
+                    <Image
+                        src={imgGroepenkast}
+                        alt="Elektricien vervangt groepenkast in Culemborg woning"
+                        width={600}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+                <div class="p-8">
+                    <div
+                        class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors"
+                    >
+                        <Server className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">
+                        Groepenkast Vervangen
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Geen stoppen meer vervangen. Wij installeren moderne,
+                        veilige groepenkasten met aardlekautomaten voor maximale
+                        veiligheid.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium hover:text-accent-light"
+                    >
+                        Ontvang prijsindicatie <ArrowRight
+                            className="w-4 h-4 ml-2"
+                        />
+                    </span>
+                </div>
+            </a>
+
+            <!-- Service 2: Laadpalen -->
+            <a
+                href="/diensten/laadpaal/"
+                class="block bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border border-border"
+            >
+                <div class="h-48 overflow-hidden">
+                    <Image
+                        src={imgLaadpaal}
+                        alt="Vakkundige installatie laadpaal aan woning"
+                        width={600}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+                <div class="p-8">
+                    <div
+                        class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/15 transition-colors"
+                    >
+                        <Zap className="w-6 h-6 text-accent" />
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">
+                        Laadpaal Installatie
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Klaar voor elektrisch rijden? Wij installeren uw
+                        laadpaal vakkundig aan huis, inclusief graafwerk en
+                        aanpassing in de meterkast.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium hover:text-accent-light"
+                    >
+                        Bekijk mogelijkheden <ArrowRight
+                            className="w-4 h-4 ml-2"
+                        />
+                    </span>
+                </div>
+            </a>
+
+            <!-- Service 3: Renovatie -->
+            <a
+                href="/diensten/renovatie/"
+                class="block bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border border-border"
+            >
+                <div class="h-48 overflow-hidden">
+                    <Image
+                        src={imgRenovatie}
+                        alt="Nieuwe bedrading tijdens elektra renovatie"
+                        width={600}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+                <div class="p-8">
+                    <div
+                        class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors"
+                    >
+                        <Home className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">
+                        Elektra Renovatie
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Gaat u verbouwen? Wij leggen complete nieuwe bedrading,
+                        frezen leidingen en zorgen dat alles voldoet aan de
+                        nieuwste NEN1010 normen.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium hover:text-accent-light"
+                    >
+                        Renovatieplan bespreken <ArrowRight
+                            className="w-4 h-4 ml-2"
+                        />
+                    </span>
+                </div>
+            </a>
+            <!-- Service 4: Verlichting -->
+            <a
+                href="/diensten/verlichting/"
+                class="block bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border border-border"
+            >
+                <div class="h-48 overflow-hidden">
+                    <Image
+                        src={imgVerlichting}
+                        alt="Professioneel gereedschap voor verlichtingsinstallatie"
+                        width={600}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+                <div class="p-8">
+                    <div
+                        class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/15 transition-colors"
+                    >
+                        <Lightbulb className="w-6 h-6 text-accent" />
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">
+                        Verlichtingsplan
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Sfeervol en functioneel. Wij adviseren, leveren en
+                        monteren energiezuinige LED-verlichting voor binnen en
+                        buiten.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium hover:text-accent-light"
+                    >
+                        Verlichting advies <ArrowRight
+                            className="w-4 h-4 ml-2"
+                        />
+                    </span>
+                </div>
+            </a>
+
+            <!-- Service 5: Zonnepanelen -->
+            <a
+                href="/diensten/zonnepanelen/"
+                class="block bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border border-border"
+            >
+                <div class="h-48 overflow-hidden">
+                    <Image
+                        src={imgZonnepanelen}
+                        alt="Monteur sluit zonnepanelen omvormer aan op meterkast"
+                        width={600}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+                <div class="p-8">
+                    <div
+                        class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors"
+                    >
+                        <Sun className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">
+                        Zonnepanelen Aansluiten
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Veilig uw zonnepanelen in gebruik nemen? Wij sluiten de
+                        omvormer aan op een vrije groep en zorgen voor de juiste
+                        monitoring.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium hover:text-accent-light"
+                    >
+                        Aansluiting regelen <ArrowRight
+                            className="w-4 h-4 ml-2"
+                        />
+                    </span>
+                </div>
+            </a>
+
+            <!-- Service 6: Inductie / Perilex -->
+            <a
+                href="/diensten/inductie/"
+                class="block bg-surface rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 group border border-border"
+            >
+                <div class="h-48 overflow-hidden">
+                    <Image
+                        src={imgInductie}
+                        alt="Elektricien bereidt perilex aansluiting voor inductiekookplaat"
+                        width={600}
+                        height={400}
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                </div>
+                <div class="p-8">
+                    <div
+                        class="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-accent/15 transition-colors"
+                    >
+                        <Plug className="w-6 h-6 text-accent" />
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">
+                        Koken op Inductie
+                    </h3>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Van het gas af? Wij leggen de benodigde kookgroep aan en
+                        installeren de Perilex-aansluiting voor uw nieuwe
+                        keuken.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium hover:text-accent-light"
+                    >
+                        Perilex aanvragen <ArrowRight
+                            className="w-4 h-4 ml-2"
+                        />
+                    </span>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

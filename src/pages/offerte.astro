@@ -1,0 +1,265 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Check, Clock, Shield, Phone } from "lucide-react";
+
+const diensten = [
+    { value: "groepenkast", label: "Groepenkast Vervangen" },
+    { value: "laadpaal", label: "Laadpaal Installatie" },
+    { value: "renovatie", label: "Elektra Renovatie" },
+    { value: "verlichting", label: "Verlichting & Lichtplan" },
+    { value: "zonnepanelen", label: "Zonnepanelen Aansluiten" },
+    { value: "inductie", label: "Inductie / Kookgroep" },
+    { value: "anders", label: "Anders / Weet ik nog niet" },
+];
+---
+
+<Layout title="Gratis Offerte Aanvragen | Van der Veen Elektrotechniek">
+    <section class="bg-primary pt-32 pb-16 text-white">
+        <div class="container-custom">
+            <div class="max-w-2xl">
+                <span
+                    class="text-accent font-bold tracking-wider uppercase text-xs mb-2 block"
+                    >Vrijblijvend & Gratis</span
+                >
+                <h1 class="text-4xl md:text-5xl font-bold font-heading text-white mb-6">
+                    Offerte Aanvragen
+                </h1>
+                <p class="text-xl text-slate-300 leading-relaxed">
+                    Vertel ons wat u nodig heeft en ontvang binnen 24 uur een
+                    heldere offerte. Geen verplichtingen, geen kleine lettertjes.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-surface">
+        <div class="container-custom">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <!-- Form Column -->
+                <div class="lg:col-span-2">
+                    <form
+                        class="space-y-6"
+                        action="https://formspree.io/f/YOUR_FORM_ID"
+                        method="POST"
+                    >
+                        <!-- Service Selection -->
+                        <div>
+                            <label
+                                for="dienst"
+                                class="block text-sm font-bold text-primary mb-2"
+                                >Waar kunnen we u mee helpen? *</label
+                            >
+                            <select
+                                id="dienst"
+                                name="dienst"
+                                required
+                                class="w-full px-4 py-3 border border-border-dark rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all bg-white text-primary"
+                            >
+                                <option value="">Selecteer een dienst...</option>
+                                {
+                                    diensten.map((d) => (
+                                        <option value={d.value}>{d.label}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
+
+                        <!-- Name & Phone Row -->
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label
+                                    for="naam"
+                                    class="block text-sm font-bold text-primary mb-2"
+                                    >Uw naam *</label
+                                >
+                                <input
+                                    type="text"
+                                    id="naam"
+                                    name="naam"
+                                    required
+                                    placeholder="Jan de Vries"
+                                    class="w-full px-4 py-3 border border-border-dark rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    for="telefoon"
+                                    class="block text-sm font-bold text-primary mb-2"
+                                    >Telefoonnummer *</label
+                                >
+                                <input
+                                    type="tel"
+                                    id="telefoon"
+                                    name="telefoon"
+                                    required
+                                    placeholder="06 - 1234 5678"
+                                    class="w-full px-4 py-3 border border-border-dark rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div>
+                            <label
+                                for="email"
+                                class="block text-sm font-bold text-primary mb-2"
+                                >E-mailadres *</label
+                            >
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                placeholder="jan@voorbeeld.nl"
+                                class="w-full px-4 py-3 border border-border-dark rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                            />
+                        </div>
+
+                        <!-- Address -->
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="md:col-span-2">
+                                <label
+                                    for="adres"
+                                    class="block text-sm font-bold text-primary mb-2"
+                                    >Straat + huisnummer</label
+                                >
+                                <input
+                                    type="text"
+                                    id="adres"
+                                    name="adres"
+                                    placeholder="Beesdseweg 1"
+                                    class="w-full px-4 py-3 border border-border-dark rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    for="postcode"
+                                    class="block text-sm font-bold text-primary mb-2"
+                                    >Postcode</label
+                                >
+                                <input
+                                    type="text"
+                                    id="postcode"
+                                    name="postcode"
+                                    placeholder="4104 AW"
+                                    class="w-full px-4 py-3 border border-border-dark rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all"
+                                />
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div>
+                            <label
+                                for="bericht"
+                                class="block text-sm font-bold text-primary mb-2"
+                                >Omschrijf uw situatie</label
+                            >
+                            <textarea
+                                id="bericht"
+                                name="bericht"
+                                rows="5"
+                                placeholder="Vertel ons meer over uw wensen, de huidige situatie, of stel uw vragen..."
+                                class="w-full px-4 py-3 border border-border-dark rounded-lg focus:ring-2 focus:ring-accent focus:border-transparent transition-all resize-none"
+                            ></textarea>
+                            <p class="text-xs text-slate-400 mt-2">
+                                Tip: stuur gerust foto's mee via WhatsApp nadat u dit
+                                formulier heeft verzonden.
+                            </p>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="pt-4">
+                            <button type="submit" class="btn-primary w-full md:w-auto">
+                                Offerte Aanvragen
+                                <span class="ml-2 text-white/70 text-sm"
+                                    >— Gratis & Vrijblijvend</span
+                                >
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-6">
+                    <!-- Trust Card -->
+                    <div class="bg-surface-dark p-6 rounded-xl border border-border">
+                        <h3 class="font-bold text-primary mb-4">Wat kunt u verwachten?</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <Clock
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <div>
+                                    <span class="font-medium text-primary block"
+                                        >Reactie binnen 24 uur</span
+                                    >
+                                    <span class="text-sm text-slate-500"
+                                        >Op werkdagen meestal dezelfde dag</span
+                                    >
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <Check
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <div>
+                                    <span class="font-medium text-primary block"
+                                        >Heldere prijsopgave</span
+                                    >
+                                    <span class="text-sm text-slate-500"
+                                        >Geen verrassingen achteraf</span
+                                    >
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <Shield
+                                    className="w-5 h-5 text-primary mt-0.5 flex-shrink-0"
+                                />
+                                <div>
+                                    <span class="font-medium text-primary block"
+                                        >100% vrijblijvend</span
+                                    >
+                                    <span class="text-sm text-slate-500"
+                                        >U zit nergens aan vast</span
+                                    >
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Urgent Card -->
+                    <div class="bg-action/5 border border-action/20 p-6 rounded-xl">
+                        <div class="flex items-center gap-2 mb-3">
+                            <Phone className="w-5 h-5 text-action" />
+                            <h3 class="font-bold text-primary">Spoed?</h3>
+                        </div>
+                        <p class="text-sm text-slate-600 mb-4">
+                            Bij stroomstoring of andere urgente problemen kunt u ons
+                            direct bellen.
+                        </p>
+                        <a
+                            href="tel:0612345678"
+                            class="inline-flex items-center justify-center w-full py-3 bg-action text-white font-bold rounded-lg hover:bg-action-hover transition-colors"
+                        >
+                            Bel: 06 - 1234 5678
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>
+
+<script>
+    // Pre-select service based on URL parameter
+    document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const dienst = urlParams.get("dienst");
+        if (dienst) {
+            const select = document.getElementById("dienst") as HTMLSelectElement;
+            if (select) {
+                select.value = dienst;
+            }
+        }
+    });
+</script>

@@ -1,0 +1,186 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactCta from "../../components/ContactCta.astro";
+import { Sun, Check, Zap, ShieldAlert } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/electrician-installing-solar-panels.webp";
+---
+
+<Layout
+    title="Zonnepanelen Aansluiten Culemborg | Van der Veen Elektrotechniek"
+>
+    <section class="bg-surface-dark pt-32 pb-16">
+        <div class="container-custom grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="text-accent font-bold tracking-wider uppercase text-xs mb-2 block"
+                    >Duurzame Energie</span
+                >
+                <h1
+                    class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+                >
+                    Zonnepanelen Aansluiten
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Heeft u panelen laten leggen maar moet de omvormer nog
+                    aangesloten worden? Wij verzorgen de veilige koppeling aan
+                    uw groepenkast, volgens NEN1010.
+                </p>
+                <div class="flex gap-4">
+                    <a href="/offerte/?dienst=zonnepanelen" class="btn-primary"
+                        >Aansluiting Plannen</a
+                    >
+                </div>
+            </div>
+            <div
+                class="relative h-[400px] bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-white"
+            >
+                <Image
+                    src={heroImage}
+                    alt="Monteur sluit zonnepanelen omvormer veilig aan"
+                    width={800}
+                    height={600}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="py-20 bg-surface">
+        <div class="container-custom grid lg:grid-cols-3 gap-12">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-12">
+                <div
+                    class="bg-yellow-50 border-l-4 border-yellow-400 p-6 rounded-r-lg"
+                >
+                    <div class="flex gap-3">
+                        <ShieldAlert
+                            class="w-6 h-6 text-action flex-shrink-0"
+                        />
+                        <div>
+                            <h3 class="font-bold text-yellow-800 mb-1">
+                                Brandgevaar bij dhz-installaties
+                            </h3>
+                            <p class="text-sm text-yellow-700">
+                                Het aansluiten van zonnepanelen luistert nauw.
+                                Een slechte verbinding kan leiden tot
+                                hitteontwikkeling (hotspots) en brand. Laat dit
+                                altijd door een erkend installateur doen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Onze Werkzaamheden
+                    </h2>
+                    <ul class="space-y-4">
+                        <li
+                            class="flex gap-4 items-center p-4 bg-surface-dark rounded-lg border border-border"
+                        >
+                            <div
+                                class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"
+                            >
+                                <span class="font-bold text-primary">1</span>
+                            </div>
+                            <span class="text-slate-700 font-medium"
+                                >Kabeltracé aanleggen van omvormer naar
+                                meterkast</span
+                            >
+                        </li>
+                        <li
+                            class="flex gap-4 items-center p-4 bg-surface-dark rounded-lg border border-border"
+                        >
+                            <div
+                                class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"
+                            >
+                                <span class="font-bold text-primary">2</span>
+                            </div>
+                            <span class="text-slate-700 font-medium"
+                                >Plaatsen aardlekautomaat (Alamat) voor de
+                                zonnegroep</span
+                            >
+                        </li>
+                        <li
+                            class="flex gap-4 items-center p-4 bg-surface-dark rounded-lg border border-border"
+                        >
+                            <div
+                                class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"
+                            >
+                                <span class="font-bold text-primary">3</span>
+                            </div>
+                            <span class="text-slate-700 font-medium"
+                                >Aansluiten omvormer & inbedrijfstelling</span
+                            >
+                        </li>
+                        <li
+                            class="flex gap-4 items-center p-4 bg-surface-dark rounded-lg border border-border"
+                        >
+                            <div
+                                class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-sm"
+                            >
+                                <span class="font-bold text-primary">4</span>
+                            </div>
+                            <span class="text-slate-700 font-medium"
+                                >Monitoring instellen (app op uw telefoon)</span
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Gereed voor Scope 12?
+                    </h2>
+                    <p class="text-slate-600 mb-4">
+                        Voor verzekeringen is vaak een Scope 12 keuring nodig.
+                        Wij installeren *scioss-ready*, zodat uw installatie
+                        probleemloos door de keuring komt.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Price Indicaton -->
+                <div
+                    class="bg-surface-dark p-6 rounded-xl shadow-lg border border-border-dark"
+                >
+                    <h3 class="font-bold text-lg mb-4 text-primary">
+                        Tarieven Aansluiting
+                    </h3>
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex justify-between text-sm">
+                            <span class="text-slate-600"
+                                >Aansluiten in meterkast (excl. kabel)</span
+                            >
+                            <span class="font-bold text-primary">€ 185,-</span>
+                        </li>
+                        <li class="flex justify-between text-sm">
+                            <span class="text-slate-600"
+                                >Extra groep (Alamat)</span
+                            >
+                            <span class="font-bold text-primary">€ 120,-</span>
+                        </li>
+                    </ul>
+                    <a
+                        href="/offerte/?dienst=zonnepanelen"
+                        class="block w-full text-center btn-primary"
+                        >Offerte Aanvragen</a
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

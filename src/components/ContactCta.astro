@@ -1,0 +1,119 @@
+---
+import { MessageCircle, Phone, ArrowRight } from "lucide-react";
+---
+
+<section id="contact" class="py-20 bg-primary relative overflow-hidden">
+    <!-- Background Pattern -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+        <svg
+            class="h-full w-full"
+            viewBox="0 0 100 100"
+            preserveAspectRatio="none"
+        >
+            <path d="M0 100 L100 0 L100 100 Z" fill="white"></path>
+        </svg>
+    </div>
+
+    <div class="container-custom relative z-10">
+        <div
+            class="bg-white rounded-2xl shadow-2xl p-8 md:p-12 lg:p-16 flex flex-col lg:flex-row gap-12 items-center"
+        >
+            <div class="flex-1 text-center lg:text-left">
+                <h2
+                    class="text-3xl md:text-4xl font-bold font-heading text-primary mb-6"
+                >
+                    Klaar om uw woning <span class="text-accent">veiliger</span> en
+                    <span class="text-accent">comfortabeler</span> te maken?
+                </h2>
+                <p
+                    class="text-slate-600 text-lg mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0"
+                >
+                    Of het nu gaat om een storing, een nieuwe groepenkast of
+                    advies over verduurzaming. Wij staan voor u klaar in
+                    Culemborg.
+                </p>
+
+                <div
+                    class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+                >
+                    <div
+                        class="flex items-center gap-2 text-primary font-medium"
+                    >
+                        <div
+                            class="w-2 h-2 rounded-full bg-green-500 animate-pulse"
+                        >
+                        </div>
+                        Nu beschikbaar voor opdrachten
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="flex-shrink-0 w-full max-w-md bg-surface-dark p-6 rounded-xl border border-border-dark shadow-inner"
+            >
+                <h3 class="text-lg font-bold text-primary mb-4 text-center">
+                    Kies hoe u contact wilt
+                </h3>
+
+                <div class="space-y-4">
+                    <!-- Option 1: Whatsapp (Low Friction) -->
+                    <a
+                        href="https://wa.me/31612345678"
+                        target="_blank"
+                        class="flex items-center p-4 bg-white rounded-lg border border-border-dark shadow-sm hover:border-whatsapp hover:ring-1 hover:ring-whatsapp transition-all group cursor-pointer"
+                    >
+                        <div
+                            class="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"
+                        >
+                            <MessageCircle className="w-5 h-5 text-whatsapp" />
+                        </div>
+                        <div class="flex-grow">
+                            <span class="block font-bold text-primary"
+                                >Stuur een WhatsApp</span
+                            >
+                            <span class="text-xs text-slate-500"
+                                >Handig voor foto's van uw situatie</span
+                            >
+                        </div>
+                        <ArrowRight
+                            className="w-5 h-5 text-slate-300 group-hover:text-whatsapp transition-colors"
+                        />
+                    </a>
+
+                    <!-- Option 2: Phone (High Urgency) -->
+                    <a
+                        href="tel:0612345678"
+                        class="flex items-center p-4 bg-white rounded-lg border border-border-dark shadow-sm hover:border-action hover:ring-1 hover:ring-action transition-all group cursor-pointer"
+                    >
+                        <div
+                            class="w-10 h-10 rounded-full bg-red-50 flex items-center justify-center mr-4 group-hover:scale-110 transition-transform"
+                        >
+                            <Phone className="w-5 h-5 text-action" />
+                        </div>
+                        <div class="flex-grow">
+                            <span class="block font-bold text-primary"
+                                >Bel direct: 06-12345678</span
+                            >
+                            <span class="text-xs text-slate-500"
+                                >Voor spoed en direct overleg</span
+                            >
+                        </div>
+                        <ArrowRight
+                            className="w-5 h-5 text-slate-300 group-hover:text-action transition-colors"
+                        />
+                    </a>
+                </div>
+
+                <div class="mt-6 text-center">
+                    <p class="text-xs text-slate-400">
+                        Liever mailen? <a
+                            href="mailto:info@vanderveen-elektro.nl"
+                            class="text-primary font-medium hover:underline"
+                            >info@vanderveen-elektro.nl</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,156 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactCta from "../components/ContactCta.astro";
+import { Shield, Clock, Smile, CheckCircle } from "lucide-react";
+import { Image } from "astro:assets";
+import imgTeam from "../assets/images/hands-holding-open-cables.webp";
+---
+
+<Layout title="Over Ons | Van der Veen Elektrotechniek Culemborg">
+    <!-- Page Header -->
+    <section class="bg-primary pt-32 pb-16 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-accent/5 pattern-grid opacity-20"></div>
+        <div class="container-custom relative z-10">
+            <h1 class="text-4xl md:text-5xl font-bold font-heading mb-6">
+                Niet zomaar een elektricien.
+            </h1>
+            <p class="text-xl text-slate-300 max-w-2xl leading-relaxed">
+                Wij geloven dat technisch vakmanschap hand in hand moet gaan met
+                ouderwetse service. Afspraak is afspraak, en we laten uw huis
+                netjes achter.
+            </p>
+        </div>
+    </section>
+
+    <!-- The "Why" Section -->
+    <section class="py-20 bg-surface">
+        <div class="container-custom grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="text-accent font-bold tracking-wider uppercase text-xs mb-2 block"
+                    >Onze Filosofie</span
+                >
+                <h2 class="text-3xl font-bold font-heading text-primary mb-6">
+                    De "Gentleman Elektricien"
+                </h2>
+                <div class="space-y-6 text-slate-600 leading-relaxed">
+                    <p>
+                        In de wereld van de bouw en techniek wordt service nog
+                        wel eens vergeten. U kent het wel: monteurs die te laat
+                        komen, onduidelijke facturen, of stof en puin
+                        achterlaten.
+                    </p>
+                    <p>
+                        Bij Van der Veen doen we dat anders. Wij zien onszelf
+                        als gast in uw huis. Dat betekent:
+                    </p>
+                    <ul class="space-y-4 mt-4">
+                        <li class="flex items-start gap-3">
+                            <CheckCircle
+                                class="w-5 h-5 text-accent mt-1 flex-shrink-0"
+                            />
+                            <span
+                                ><strong
+                                    >Schoenen uit of overtrekken aan.</strong
+                                > We beschermen uw vloer.</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <CheckCircle
+                                class="w-5 h-5 text-accent mt-1 flex-shrink-0"
+                            />
+                            <span
+                                ><strong>Heldere communicatie.</strong> Geen vakjargon,
+                                maar duidelijke uitleg.</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <CheckCircle
+                                class="w-5 h-5 text-accent mt-1 flex-shrink-0"
+                            />
+                            <span
+                                ><strong>Stofvrij werken.</strong> We ruimen onze
+                                eigen rommel op (en vaak meer).</span
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="relative">
+                <div
+                    class="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500"
+                >
+                    <Image
+                        src={imgTeam}
+                        alt="Van der Veen elektricien team werkt zorgvuldig aan bedrading"
+                        width={800}
+                        height={600}
+                        loading="lazy"
+                        decoding="async"
+                        class="w-full h-full object-cover"
+                    />
+                </div>
+                <div
+                    class="absolute -bottom-4 -left-4 bg-gradient-to-br from-primary to-primary/80 px-6 py-4 rounded-2xl shadow-2xl max-w-xs hidden md:block"
+                >
+                    <p class="font-heading font-bold text-white text-lg">
+                        "Vakwerk is de standaard."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Grid -->
+    <section class="py-20 bg-surface-dark">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div
+                    class="bg-surface p-8 rounded-xl shadow-sm border border-border"
+                >
+                    <Shield class="w-10 h-10 text-primary mb-6" />
+                    <h3
+                        class="text-xl font-bold font-heading text-primary mb-3"
+                    >
+                        Veiligheid Voorop
+                    </h3>
+                    <p class="text-slate-600">
+                        Wij werken strikt volgens de NEN 1010 en 3140 normen.
+                        Geen hobby-bob oplossingen, maar gecertificeerde
+                        veiligheid.
+                    </p>
+                </div>
+                <div
+                    class="bg-surface p-8 rounded-xl shadow-sm border border-border"
+                >
+                    <Clock class="w-10 h-10 text-primary mb-6" />
+                    <h3
+                        class="text-xl font-bold font-heading text-primary mb-3"
+                    >
+                        Punctueel
+                    </h3>
+                    <p class="text-slate-600">
+                        Uw tijd is kostbaar. Wij plannen blokken van 2 uur,
+                        zodat u niet de hele dag hoeft te wachten.
+                    </p>
+                </div>
+                <div
+                    class="bg-surface p-8 rounded-xl shadow-sm border border-border"
+                >
+                    <Smile class="w-10 h-10 text-primary mb-6" />
+                    <h3
+                        class="text-xl font-bold font-heading text-primary mb-3"
+                    >
+                        Met een Glimlach
+                    </h3>
+                    <p class="text-slate-600">
+                        Wij houden van ons vak, en dat merkt u. Vriendelijk,
+                        beleefd en oplossingsgericht.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

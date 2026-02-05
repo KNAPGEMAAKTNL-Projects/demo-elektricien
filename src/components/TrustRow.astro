@@ -1,0 +1,83 @@
+---
+import { ShieldCheck, Award, ThumbsUp, CheckCircle } from "lucide-react";
+---
+
+<section class="bg-surface border-b border-border py-6">
+    <div class="container-custom">
+        <div
+            class="flex flex-wrap justify-center md:justify-between items-center gap-6 opacity-80 hover:opacity-100 transition-opacity duration-300"
+        >
+            <!-- Badge 1: NEN -->
+            <div class="flex items-center gap-3 group">
+                <div
+                    class="p-2 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors"
+                >
+                    <ShieldCheck className="w-6 h-6 text-primary" />
+                </div>
+                <div class="flex flex-col">
+                    <span
+                        class="text-xs font-bold text-slate-400 uppercase tracking-wider"
+                        >Certificering</span
+                    >
+                    <span class="text-sm font-bold text-primary font-heading"
+                        >NEN 1010 & 3140</span
+                    >
+                </div>
+            </div>
+
+            <!-- Badge 2: Sterkin -->
+            <div class="flex items-center gap-3 group">
+                <div
+                    class="p-2 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors"
+                >
+                    <Award className="w-6 h-6 text-accent" />
+                </div>
+                <div class="flex flex-col">
+                    <span
+                        class="text-xs font-bold text-slate-400 uppercase tracking-wider"
+                        >Erkend</span
+                    >
+                    <span class="text-sm font-bold text-primary font-heading"
+                        >Sterkin Installateur</span
+                    >
+                </div>
+            </div>
+
+            <!-- Badge 3: VCA -->
+            <div class="flex items-center gap-3 group">
+                <div
+                    class="p-2 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors"
+                >
+                    <CheckCircle className="w-6 h-6 text-primary" />
+                </div>
+                <div class="flex flex-col">
+                    <span
+                        class="text-xs font-bold text-slate-400 uppercase tracking-wider"
+                        >Veiligheid</span
+                    >
+                    <span class="text-sm font-bold text-primary font-heading"
+                        >VCA Vol Gecertificeerd</span
+                    >
+                </div>
+            </div>
+
+            <!-- Badge 4: Warranty -->
+            <div class="flex items-center gap-3 group">
+                <div
+                    class="p-2 bg-primary/5 rounded-full group-hover:bg-primary/10 transition-colors"
+                >
+                    <ThumbsUp className="w-6 h-6 text-primary" />
+                </div>
+                <div class="flex flex-col">
+                    <span
+                        class="text-xs font-bold text-slate-400 uppercase tracking-wider"
+                        >Garantie</span
+                    >
+                    <span class="text-sm font-bold text-primary font-heading"
+                        >5 Jaar Garantie</span
+                    >
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

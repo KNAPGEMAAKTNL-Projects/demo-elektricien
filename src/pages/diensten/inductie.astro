@@ -1,0 +1,195 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactCta from "../../components/ContactCta.astro";
+import { Plug, Flame, Check } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/hands-holding-open-cables.webp";
+---
+
+<Layout title="Inductie & Perilex Aansluiten | Van der Veen Elektrotechniek">
+    <section class="bg-surface-dark pt-32 pb-16">
+        <div class="container-custom grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="text-accent font-bold tracking-wider uppercase text-xs mb-2 block"
+                    >Gasvrij Wonen</span
+                >
+                <h1
+                    class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+                >
+                    Koken op Inductie
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Overstappen van gas naar elektrisch koken? Wij leggen de
+                    verplichte kookgroep aan en monteren de Perilex-aansluiting
+                    in uw keuken.
+                </p>
+                <div class="flex gap-4">
+                    <a href="/offerte/?dienst=inductie" class="btn-primary"
+                        >Kookgroep Aanvragen</a
+                    >
+                </div>
+            </div>
+            <div
+                class="relative h-[400px] bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-white"
+            >
+                <Image
+                    src={heroImage}
+                    alt="Elektricien bereidt perilex aansluiting voor inductiekookplaat"
+                    width={800}
+                    height={600}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="py-20 bg-surface">
+        <div class="container-custom grid lg:grid-cols-3 gap-12">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-12">
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Wat is een Perilex aansluiting?
+                    </h2>
+                    <p class="text-slate-600 mb-6">
+                        Voor inductiekookplaten is een standaard stopcontact
+                        niet geschikt. Ze vragen veel vermogen (tot 7400 Watt of
+                        meer). Hiervoor is een speciale 5-polige stekker nodig:
+                        de Perilex.
+                    </p>
+                    <div
+                        class="flex gap-6 items-center p-6 bg-primary/5 rounded-xl border border-border"
+                    >
+                        <Plug class="w-10 h-10 text-primary flex-shrink-0" />
+                        <div>
+                            <h3 class="font-bold text-primary">
+                                2-Fasen of 3-Fasen?
+                            </h3>
+                            <p class="text-sm text-slate-700 mt-1">
+                                De meeste kookplaten werken op een 2x230V
+                                kookgroep (Forfornuisgroep). Voor zware
+                                professionele platen is krachtstroom (3-fasen)
+                                nodig. Wij controleren wat u nodig heeft.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Ons stappenplan
+                    </h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold flex-shrink-0"
+                            >
+                                1
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary">
+                                    Controle Meterkast
+                                </h3>
+                                <p class="text-slate-600 text-sm">
+                                    Is er ruimte voor een kookgroep of moet de
+                                    kast uitgebreid worden?
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold flex-shrink-0"
+                            >
+                                2
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary">
+                                    Leiding Trekken
+                                </h3>
+                                <p class="text-slate-600 text-sm">
+                                    Wij trekken nieuwe bedrading (5x2.5mm²) van
+                                    de meterkast naar de keuken. Vaak via de
+                                    kruipruimte.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div
+                                class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center font-bold flex-shrink-0"
+                            >
+                                3
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary">
+                                    Montage & Testen
+                                </h3>
+                                <p class="text-slate-600 text-sm">
+                                    We monteren de Perilex-doos en meten na of
+                                    de fases correct zijn aangesloten om schade
+                                    aan uw plaat te voorkomen.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Trust Card -->
+                <div
+                    class="bg-surface-dark p-6 rounded-xl border border-border"
+                >
+                    <h3 class="font-bold text-primary mb-4">
+                        Veelgemaakte Fout
+                    </h3>
+                    <p class="text-sm text-slate-600 mb-4">
+                        "Doe-het-zelvers sluiten de Perilex vaak verkeerd om
+                        aan. Hierdoor blaast u direct de elektronica van uw
+                        nieuwe kookplaat op. Dit valt <strong>niet</strong> onder
+                        de garantie."
+                    </p>
+                    <div
+                        class="flex items-center gap-2 text-accent font-bold text-sm"
+                    >
+                        <Check class="w-4 h-4" />
+                        Aansluiten met garantie
+                    </div>
+                </div>
+
+                <!-- Price Indicaton -->
+                <div
+                    class="bg-surface p-6 rounded-xl shadow-lg border border-border"
+                >
+                    <h3 class="font-bold text-lg mb-2 text-primary">
+                        Kookgroep Pakket
+                    </h3>
+                    <p class="text-slate-500 text-xs mb-4">
+                        Plaatsen automaat + kabel naar keuken (tot 10m
+                        kruipruimte) + Perilex wcd.
+                    </p>
+                    <p class="text-3xl font-bold text-primary mb-1">€ 395,-</p>
+                    <p class="text-xs text-slate-400 mb-6">
+                        Incl. BTW & Materiaal
+                    </p>
+                    <a
+                        href="/offerte/?dienst=inductie"
+                        class="block w-full text-center btn-primary"
+                        >Nu Aanvragen</a
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

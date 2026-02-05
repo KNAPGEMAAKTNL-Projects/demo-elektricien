@@ -1,0 +1,197 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactCta from "../../components/ContactCta.astro";
+import { Check, ShieldCheck, AlertTriangle } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/electrician-working-electrical-box.webp";
+---
+
+<Layout title="Groepenkast Vervangen Culemborg | Van der Veen Elektrotechniek">
+    <section class="bg-surface-dark pt-32 pb-16">
+        <div class="container-custom grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="text-accent font-bold tracking-wider uppercase text-xs mb-2 block"
+                    >Veiligheid & Uitbreiding</span
+                >
+                <h1
+                    class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+                >
+                    Groepenkast Vervangen
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Is uw groepenkast verouderd of wilt u elektrisch gaan koken?
+                    Wij plaatsen moderne, veilige meterkasten die voldoen aan
+                    alle huidige eisen. Binnen 1 dag geregeld.
+                </p>
+                <div class="flex gap-4">
+                    <a href="/offerte/?dienst=groepenkast" class="btn-primary">Offerte Aanvragen</a>
+                    <a href="#waarom" class="btn-secondary">Lees meer</a>
+                </div>
+            </div>
+            <div
+                class="relative h-[400px] bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-white"
+            >
+                <Image
+                    src={heroImage}
+                    alt="Elektricien installeert nieuwe groepenkast Culemborg"
+                    width={800}
+                    height={600}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="py-20 bg-surface">
+        <div class="container-custom grid lg:grid-cols-3 gap-12">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-12">
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Wanneer moet u de groepenkast vervangen?
+                    </h2>
+                    <p class="text-slate-600 mb-6">
+                        De groepenkast is het hart van uw elektrische
+                        installatie. Veel woningen in Culemborg hebben nog
+                        verouderde "stoppenkasten" die niet berekend zijn op het
+                        huidige energieverbruik.
+                    </p>
+                    <ul class="space-y-4">
+                        <li
+                            class="flex gap-3 bg-red-50 p-4 rounded-lg border border-red-100"
+                        >
+                            <AlertTriangle
+                                class="w-5 h-5 text-action flex-shrink-0 mt-0.5"
+                            />
+                            <span class="text-slate-700"
+                                ><strong>Geen aardlekschakelaar:</strong> Levensgevaarlijk
+                                bij defecte apparaten. Vervanging is noodzakelijk.</span
+                            >
+                        </li>
+                        <li
+                            class="flex gap-3 bg-slate-50 p-4 rounded-lg border border-border"
+                        >
+                            <ShieldCheck
+                                class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"
+                            />
+                            <span class="text-slate-700"
+                                ><strong>Uitbreiding nodig:</strong> Voor zonnepanelen,
+                                laadpalen of inductiekoken is vaak een aanpassing
+                                of verzuring nodig.</span
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Onze Werkwijze
+                    </h2>
+                    <div
+                        class="relative border-l-2 border-border-dark ml-3 pl-8 space-y-8"
+                    >
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-accent border-4 border-white"
+                            >
+                            </div>
+                            <h3 class="font-bold text-primary text-lg">
+                                1. Inspectie & Advies
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-1">
+                                Stuur ons een foto van uw huidige kast via
+                                WhatsApp. Wij kijken direct wat er nodig is.
+                            </p>
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-slate-200 border-4 border-white"
+                            >
+                            </div>
+                            <h3 class="font-bold text-primary text-lg">
+                                2. Installatie
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-1">
+                                Onze monteur komt langs op de afgesproken dag.
+                                We werken netjes en sluiten alles veilig aan.
+                            </p>
+                        </div>
+                        <div class="relative">
+                            <div
+                                class="absolute -left-[41px] top-0 w-6 h-6 rounded-full bg-slate-200 border-4 border-white"
+                            >
+                            </div>
+                            <h3 class="font-bold text-primary text-lg">
+                                3. Controle & NEN-Meting
+                            </h3>
+                            <p class="text-slate-600 text-sm mt-1">
+                                We testen de installatie door en u ontvangt een
+                                opleverrapport indien gewenst.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Trust Card -->
+                <div
+                    class="bg-surface-dark p-6 rounded-xl border border-border"
+                >
+                    <h3 class="font-bold text-primary mb-4">
+                        Waarom Van der Veen?
+                    </h3>
+                    <ul class="space-y-3">
+                        <li
+                            class="flex items-center gap-2 text-sm text-slate-600"
+                        >
+                            <Check class="w-4 h-4 text-accent" />
+                            Alleen A-merken (Hager/ABB)
+                        </li>
+                        <li
+                            class="flex items-center gap-2 text-sm text-slate-600"
+                        >
+                            <Check class="w-4 h-4 text-accent" />
+                            Gecertificeerde monteurs
+                        </li>
+                        <li
+                            class="flex items-center gap-2 text-sm text-slate-600"
+                        >
+                            <Check class="w-4 h-4 text-accent" />
+                            5 Jaar Garantie
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Price Indicaton -->
+                <div class="bg-primary text-white p-6 rounded-xl shadow-lg">
+                    <h3 class="font-bold text-lg mb-2">Prijsindicatie</h3>
+                    <p class="text-slate-300 text-sm mb-4">
+                        Standaard groepenkast vervanging 1-fase (8 groepen)
+                    </p>
+                    <p class="text-3xl font-bold text-white mb-1">€ 650,-</p>
+                    <p class="text-xs text-white/60 mb-6">
+                        Inclusief montage & BTW
+                    </p>
+                    <a
+                        href="/offerte/?dienst=groepenkast"
+                        class="block w-full text-center bg-accent hover:bg-accent-light text-white font-bold py-3 rounded-lg transition-colors"
+                        >Offerte Aanvragen</a
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

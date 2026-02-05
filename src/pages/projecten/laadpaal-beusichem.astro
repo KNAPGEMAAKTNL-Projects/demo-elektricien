@@ -1,0 +1,191 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactCta from "../../components/ContactCta.astro";
+import { MapPin, Calendar, Clock, CheckCircle, ArrowLeft } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/home-car-charger.webp";
+---
+
+<Layout title="Laadpaal Installatie Beusichem | Van der Veen Elektrotechniek">
+    <section class="bg-surface-dark pt-32 pb-8">
+        <div class="container-custom">
+            <a
+                href="/projecten/"
+                class="inline-flex items-center text-slate-500 hover:text-primary mb-6 transition-colors"
+            >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Terug naar projecten
+            </a>
+            <div class="flex items-center gap-3 mb-4">
+                <div
+                    class="bg-accent/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-white uppercase tracking-wider"
+                >
+                    Laadpaal
+                </div>
+                <div class="flex items-center gap-2 text-slate-400 text-sm">
+                    <MapPin className="w-4 h-4" />
+                    <span>Beusichem</span>
+                </div>
+            </div>
+            <h1
+                class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+            >
+                Alfen Eve Single Pro-line
+            </h1>
+            <p class="text-lg text-slate-600 max-w-3xl">
+                Installatie van een slimme laadpaal op eigen oprit, inclusief
+                graafwerkzaamheden en load-balancing module in de meterkast.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12 bg-surface border-b border-border">
+        <div class="container-custom">
+            <div class="aspect-[21/9] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                    src={heroImage}
+                    alt="Laadpaal installatie project Beusichem"
+                    width={1200}
+                    height={514}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-surface">
+        <div class="container-custom">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <div>
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-4"
+                        >
+                            De situatie
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            De klant in Beusichem had net een elektrische auto
+                            aangeschaft en wilde comfortabel thuis kunnen laden.
+                            De meterkast bevond zich aan de voorkant van de
+                            woning, terwijl de auto geparkeerd staat in de
+                            carport aan de zijkant.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Dit betekende dat er circa 12 meter kabel door de
+                            tuin moest worden aangelegd. Daarnaast had de woning
+                            een 1-fase aansluiting, wat de laadsnelheid beperkt.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-4"
+                        >
+                            Onze oplossing
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            We kozen voor de Alfen Eve Single Pro-line, een
+                            betrouwbare Nederlandse laadpaal met uitstekende
+                            smart-charging mogelijkheden. Om overbelasting te
+                            voorkomen hebben we een load-balancing module
+                            geinstalleerd.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >Alfen Eve Single Pro-line 22kW</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >12 meter grondkabel in mantelbuis</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >Load-balancing module voor veilig laden</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >Aparte groep met 32A automaat</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-4"
+                        >
+                            Het resultaat
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed">
+                            De klant kan nu veilig en slim laden op eigen oprit.
+                            Via de Alfen app is het laadgedrag te monitoren en
+                            kan er geprofiteerd worden van dynamische tarieven.
+                            De load-balancing zorgt ervoor dat de hoofdzekering
+                            nooit overbelast raakt.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div
+                        class="bg-surface-dark p-6 rounded-xl border border-border"
+                    >
+                        <h3 class="font-bold text-primary mb-4">
+                            Projectgegevens
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-sm">
+                                <MapPin className="w-4 h-4 text-slate-400" />
+                                <span class="text-slate-600">Beusichem</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <Calendar className="w-4 h-4 text-slate-400" />
+                                <span class="text-slate-600">Oktober 2024</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <Clock className="w-4 h-4 text-slate-400" />
+                                <span class="text-slate-600">1,5 werkdag</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-primary text-white p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-3">
+                            Ook thuis laden?
+                        </h3>
+                        <p class="text-white/80 text-sm mb-4">
+                            Wij adviseren u over de beste laadoplossing voor uw
+                            situatie en auto.
+                        </p>
+                        <a
+                            href="/contact/"
+                            class="block w-full text-center bg-accent hover:bg-accent-light text-white font-bold py-3 rounded-lg transition-colors"
+                            >Gratis adviesgesprek</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

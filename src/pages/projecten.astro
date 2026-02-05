@@ -1,0 +1,208 @@
+---
+import Layout from "../layouts/Layout.astro";
+import ContactCta from "../components/ContactCta.astro";
+import { MapPin, ArrowRight } from "lucide-react";
+import { Image } from "astro:assets";
+import imgGroepenkast from "../assets/images/worker-working-on-electrical-box.webp";
+import imgLaadpaal from "../assets/images/home-car-charger.webp";
+import imgVerlichting from "../assets/images/electrical-measurement-tools.webp";
+import imgZonnepanelen from "../assets/images/electrician-installing-solar-panels.webp";
+---
+
+<Layout title="Projecten & Referenties | Van der Veen Elektrotechniek">
+    <section class="bg-surface-dark pt-32 pb-12">
+        <div class="container-custom text-center">
+            <h1
+                class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+            >
+                Recent Werk
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto">
+                Wij zijn trots op wat we maken. Bekijk hier een selectie van
+                recente projecten in Culemborg en omstreken.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-20 bg-surface">
+        <div class="container-custom">
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <!-- Project 1 -->
+                <a href="/projecten/groepenkast-lanxmeer/" class="group cursor-pointer block">
+                    <div
+                        class="aspect-[16/10] bg-slate-200 rounded-2xl overflow-hidden mb-6 relative"
+                    >
+                        <Image
+                            src={imgGroepenkast}
+                            alt="Moderne groepenkast installatie Lanxmeer Culemborg"
+                            width={800}
+                            height={500}
+                            loading="lazy"
+                            decoding="async"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div
+                            class="absolute top-4 left-4 bg-primary/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-white uppercase tracking-wider shadow-lg"
+                        >
+                            Renovatie
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 text-slate-400 text-sm mb-2"
+                    >
+                        <MapPin class="w-4 h-4" />
+                        <span>Culemborg, Lanxmeer</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-bold font-heading text-primary mb-2 group-hover:text-accent transition-colors"
+                    >
+                        Complete vervanging groepenkast
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Voor deze jaren '70 woning hebben we de onveilige
+                        stoppenkast vervangen voor een moderne Hager installatie
+                        met 12 groepen en kookgroep.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium text-sm"
+                        >Bekijk details <ArrowRight
+                            class="w-4 h-4 ml-1"
+                        /></span
+                    >
+                </a>
+
+                <!-- Project 2 -->
+                <a href="/projecten/laadpaal-beusichem/" class="group cursor-pointer block">
+                    <div
+                        class="aspect-[16/10] bg-slate-200 rounded-2xl overflow-hidden mb-6 relative"
+                    >
+                        <Image
+                            src={imgLaadpaal}
+                            alt="Alfen laadpaal geinstalleerd aan woning Beusichem"
+                            width={800}
+                            height={500}
+                            loading="lazy"
+                            decoding="async"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div
+                            class="absolute top-4 left-4 bg-accent/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-white uppercase tracking-wider shadow-lg"
+                        >
+                            Laadpaal
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 text-slate-400 text-sm mb-2"
+                    >
+                        <MapPin class="w-4 h-4" />
+                        <span>Beusichem</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-bold font-heading text-primary mb-2 group-hover:text-accent transition-colors"
+                    >
+                        Alfen Eve Single Pro-line
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Installatie van een slimme laadpaal op eigen oprit,
+                        inclusief graafwerkzaamheden en load-balancing module in
+                        de meterkast.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium text-sm"
+                        >Bekijk details <ArrowRight
+                            class="w-4 h-4 ml-1"
+                        /></span
+                    >
+                </a>
+
+                <!-- Project 3 -->
+                <a href="/projecten/verlichting-centrum/" class="group cursor-pointer block">
+                    <div
+                        class="aspect-[16/10] bg-slate-200 rounded-2xl overflow-hidden mb-6 relative"
+                    >
+                        <Image
+                            src={imgVerlichting}
+                            alt="LED verlichting woonkeuken Culemborg centrum"
+                            width={800}
+                            height={500}
+                            loading="lazy"
+                            decoding="async"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div
+                            class="absolute top-4 left-4 bg-accent/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-white uppercase tracking-wider shadow-lg"
+                        >
+                            Verlichting
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 text-slate-400 text-sm mb-2"
+                    >
+                        <MapPin class="w-4 h-4" />
+                        <span>Culemborg, Centrum</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-bold font-heading text-primary mb-2 group-hover:text-accent transition-colors"
+                    >
+                        Lichtplan Woonkeuken
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Frezen van nieuwe leidingen en installatie van dimbare
+                        LED-spots en pendelarmaturen boven het kookeiland.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium text-sm"
+                        >Bekijk details <ArrowRight
+                            class="w-4 h-4 ml-1"
+                        /></span
+                    >
+                </a>
+
+                <!-- Project 4 -->
+                <a href="/projecten/zonnepanelen-tiel/" class="group cursor-pointer block">
+                    <div
+                        class="aspect-[16/10] bg-slate-200 rounded-2xl overflow-hidden mb-6 relative"
+                    >
+                        <Image
+                            src={imgZonnepanelen}
+                            alt="Zonnepanelen omvormer aansluiting Tiel"
+                            width={800}
+                            height={500}
+                            loading="lazy"
+                            decoding="async"
+                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div
+                            class="absolute top-4 left-4 bg-primary/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-white uppercase tracking-wider shadow-lg"
+                        >
+                            Duurzaam
+                        </div>
+                    </div>
+                    <div
+                        class="flex items-center gap-2 text-slate-400 text-sm mb-2"
+                    >
+                        <MapPin class="w-4 h-4" />
+                        <span>Tiel</span>
+                    </div>
+                    <h3
+                        class="text-2xl font-bold font-heading text-primary mb-2 group-hover:text-accent transition-colors"
+                    >
+                        Aansluiting Zonnepaneel Systeem
+                    </h3>
+                    <p class="text-slate-600 leading-relaxed mb-4">
+                        Veilige aansluiting van de omvormer op een vrije groep,
+                        inclusief werkschakelaar en monitoring module.
+                    </p>
+                    <span
+                        class="inline-flex items-center text-accent font-medium text-sm"
+                        >Bekijk details <ArrowRight
+                            class="w-4 h-4 ml-1"
+                        /></span
+                    >
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

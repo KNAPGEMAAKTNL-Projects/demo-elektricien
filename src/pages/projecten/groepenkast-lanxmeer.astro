@@ -1,0 +1,193 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactCta from "../../components/ContactCta.astro";
+import { MapPin, Calendar, Clock, CheckCircle, ArrowLeft } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/worker-working-on-electrical-box.webp";
+---
+
+<Layout title="Groepenkast Vervanging Lanxmeer | Van der Veen Elektrotechniek">
+    <section class="bg-surface-dark pt-32 pb-8">
+        <div class="container-custom">
+            <a
+                href="/projecten/"
+                class="inline-flex items-center text-slate-500 hover:text-primary mb-6 transition-colors"
+            >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Terug naar projecten
+            </a>
+            <div class="flex items-center gap-3 mb-4">
+                <div
+                    class="bg-primary/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-white uppercase tracking-wider"
+                >
+                    Renovatie
+                </div>
+                <div class="flex items-center gap-2 text-slate-400 text-sm">
+                    <MapPin className="w-4 h-4" />
+                    <span>Culemborg, Lanxmeer</span>
+                </div>
+            </div>
+            <h1
+                class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+            >
+                Complete vervanging groepenkast
+            </h1>
+            <p class="text-lg text-slate-600 max-w-3xl">
+                Voor deze jaren '70 woning hebben we de onveilige stoppenkast
+                vervangen voor een moderne Hager installatie met 12 groepen en
+                kookgroep.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12 bg-surface border-b border-border">
+        <div class="container-custom">
+            <div class="aspect-[21/9] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                    src={heroImage}
+                    alt="Nieuwe groepenkast installatie Lanxmeer Culemborg"
+                    width={1200}
+                    height={514}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-surface">
+        <div class="container-custom">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <div>
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-4"
+                        >
+                            De situatie
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            De bewoners van deze woning in Lanxmeer hadden nog
+                            een oude stoppenkast uit de jaren '70. De installatie
+                            was niet alleen verouderd, maar ook onveilig: er
+                            ontbrak een aardlekschakelaar en de capaciteit was
+                            onvoldoende voor moderne apparaten.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            Daarnaast wilden de bewoners een inductiekookplaat
+                            plaatsen, waarvoor een aparte kookgroep nodig was.
+                            De perfecte aanleiding voor een complete vernieuwing.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-4"
+                        >
+                            Onze oplossing
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            We hebben de volledige groepenkast vervangen door
+                            een moderne Hager installatie. De nieuwe kast is
+                            overzichtelijk ingedeeld en voorzien van alle
+                            benodigde beveiligingen.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >12 groepen met aardlekautomaten</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >Aparte 3-fase kookgroep voor inductie</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >Overspanningsbeveiliging geinstalleerd</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >Duidelijke groepnummering en schema</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-4"
+                        >
+                            Het resultaat
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed">
+                            De bewoners hebben nu een veilige, overzichtelijke
+                            installatie die klaar is voor de toekomst. De
+                            inductiekookplaat werkt perfect en er is ruimte voor
+                            toekomstige uitbreidingen zoals een laadpaal.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div
+                        class="bg-surface-dark p-6 rounded-xl border border-border"
+                    >
+                        <h3 class="font-bold text-primary mb-4">
+                            Projectgegevens
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-sm">
+                                <MapPin className="w-4 h-4 text-slate-400" />
+                                <span class="text-slate-600"
+                                    >Culemborg, Lanxmeer</span
+                                >
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <Calendar className="w-4 h-4 text-slate-400" />
+                                <span class="text-slate-600">November 2024</span
+                                >
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <Clock className="w-4 h-4 text-slate-400" />
+                                <span class="text-slate-600">1 werkdag</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-primary text-white p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-3">
+                            Ook uw groepenkast vervangen?
+                        </h3>
+                        <p class="text-white/80 text-sm mb-4">
+                            Wij adviseren u graag over de mogelijkheden voor uw
+                            situatie.
+                        </p>
+                        <a
+                            href="/contact/"
+                            class="block w-full text-center bg-accent hover:bg-accent-light text-white font-bold py-3 rounded-lg transition-colors"
+                            >Gratis adviesgesprek</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

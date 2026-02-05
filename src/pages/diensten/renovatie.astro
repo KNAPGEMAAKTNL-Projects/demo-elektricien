@@ -1,0 +1,201 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactCta from "../../components/ContactCta.astro";
+import { Home, Hammer, CheckCircle, Ruler } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/loose-hanging-cables.webp";
+---
+
+<Layout title="Elektra Renovatie Culemborg | Van der Veen Elektrotechniek">
+    <section class="bg-surface-dark pt-32 pb-16">
+        <div class="container-custom grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="text-accent font-bold tracking-wider uppercase text-xs mb-2 block"
+                    >Verbouwing & Renovatie</span
+                >
+                <h1
+                    class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+                >
+                    Elektra Renovatie
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Gaat u verbouwen of een nieuwe keuken plaatsen? Wij zorgen
+                    voor het complete leidingwerk, frezen sleuven en monteren
+                    het schakelmateriaal. Strak en stofvrij.
+                </p>
+                <div class="flex gap-4">
+                    <a href="/offerte/?dienst=renovatie" class="btn-primary">Offerte Aanvragen</a>
+                    <a href="#werkwijze" class="btn-secondary">Onze werkwijze</a
+                    >
+                </div>
+            </div>
+            <div
+                class="relative h-[400px] bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-white"
+            >
+                <Image
+                    src={heroImage}
+                    alt="Nieuwe bedrading tijdens elektra renovatie woning"
+                    width={800}
+                    height={600}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="py-20 bg-surface">
+        <div class="container-custom grid lg:grid-cols-3 gap-12">
+            <!-- Main Content -->
+            <div class="lg:col-span-2 space-y-12">
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Complete Installatie Vernieuwen
+                    </h2>
+                    <p class="text-slate-600 mb-6">
+                        Bij oudere woningen (voor 1980) is de bedrading vaak
+                        verouderd en niet geaard. Dit is niet alleen onhandig,
+                        maar kan ook brandgevaarlijk zijn. Wij vervangen de
+                        complete installatie, van de meterkast tot aan het
+                        stopcontact.
+                    </p>
+                    <ul class="space-y-4">
+                        <li
+                            class="flex gap-3 bg-surface-dark p-4 rounded-lg border border-border"
+                        >
+                            <Hammer
+                                class="w-5 h-5 text-accent flex-shrink-0 mt-0.5"
+                            />
+                            <span class="text-slate-700"
+                                ><strong>Sleuven Frezen:</strong> Wij frezen netjes
+                                in beton en kalkzandsteen, inclusief stofafzuiging.</span
+                            >
+                        </li>
+                        <li
+                            class="flex gap-3 bg-surface-dark p-4 rounded-lg border border-border"
+                        >
+                            <Ruler
+                                class="w-5 h-5 text-primary flex-shrink-0 mt-0.5"
+                            />
+                            <span class="text-slate-700"
+                                ><strong>Installatietekening:</strong> We maken vooraf
+                                een duidelijk plan voor alle licht- en stroompunten.</span
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="werkwijze">
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Wat wij voor u doen
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <h3 class="font-bold text-primary">
+                                Keuken Renovatie
+                            </h3>
+                            <p class="text-sm text-slate-600">
+                                Voor een nieuwe keuken moet het leidingschema
+                                vaak compleet omgegooid worden. Wij leggen alles
+                                precies op maat volgens de keukenleverancier
+                                tekening.
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="font-bold text-primary">
+                                Badkamer Elektra
+                            </h3>
+                            <p class="text-sm text-slate-600">
+                                Veiligheid is cruciaal in vochtige ruimtes. Wij
+                                zorgen voor aarding (vereffening) en veilige
+                                zones voor verlichting en stopcontacten.
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="font-bold text-primary">
+                                Zolder Verbouwing
+                            </h3>
+                            <p class="text-sm text-slate-600">
+                                Een dakkapel of extra slaapkamer? Wij trekken
+                                extra groepen naar zolder voor wasmachine,
+                                droger of elektrische verwarming.
+                            </p>
+                        </div>
+                        <div class="space-y-4">
+                            <h3 class="font-bold text-primary">Afmontage</h3>
+                            <p class="text-sm text-slate-600">
+                                Na het stucwerk komen we terug voor de
+                                "finishing touch": het monteren van luxe
+                                schakelmateriaal (bijv. Gira, Jung of
+                                Busch-Jaeger).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Trust Card -->
+                <div
+                    class="bg-surface-dark p-6 rounded-xl border border-border"
+                >
+                    <h3 class="font-bold text-primary mb-4">
+                        Moeiteloos Verbouwen
+                    </h3>
+                    <ul class="space-y-3">
+                        <li
+                            class="flex items-center gap-2 text-sm text-slate-600"
+                        >
+                            <CheckCircle class="w-4 h-4 text-accent" />
+                            Wij werken samen met uw aannemer
+                        </li>
+                        <li
+                            class="flex items-center gap-2 text-sm text-slate-600"
+                        >
+                            <CheckCircle class="w-4 h-4 text-accent" />
+                            Minimale stofoverlast
+                        </li>
+                        <li
+                            class="flex items-center gap-2 text-sm text-slate-600"
+                        >
+                            <CheckCircle class="w-4 h-4 text-accent" />
+                            Duidelijke vaste prijs
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Price Indicaton -->
+                <div
+                    class="bg-surface p-6 rounded-xl shadow-lg border border-border"
+                >
+                    <h3 class="font-bold text-lg mb-2 text-primary">
+                        Projectprijs?
+                    </h3>
+                    <p class="text-slate-600 text-sm mb-4">
+                        Omdat elke verbouwing anders is, komen we graag langs
+                        voor een opname.
+                    </p>
+                    <a
+                        href="/offerte/?dienst=renovatie"
+                        class="block w-full text-center btn-primary"
+                        >Gratis Opname Inplannen</a
+                    >
+                    <p class="text-xs text-center text-slate-400 mt-4">
+                        Vrijblijvende offerte binnen 2 werkdagen
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

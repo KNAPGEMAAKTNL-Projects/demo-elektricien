@@ -1,0 +1,159 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactCta from "../../components/ContactCta.astro";
+import { Zap, Car, Check } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/tesla-charging.webp";
+---
+
+<Layout title="Laadpaal Installatie Culemborg | Van der Veen Elektrotechniek">
+    <section class="bg-surface-dark pt-32 pb-16">
+        <div class="container-custom grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span
+                    class="text-accent font-bold tracking-wider uppercase text-xs mb-2 block"
+                    >Duurzaam Rijden</span
+                >
+                <h1
+                    class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+                >
+                    Laadpaal Installatie Thuis
+                </h1>
+                <p class="text-lg text-slate-600 leading-relaxed mb-8">
+                    Start elke dag met een volle accu. Wij installeren uw
+                    laadpunt veilig en vakkundig, inclusief aanpassing van de
+                    meterkast en eventueel graafwerk.
+                </p>
+                <div class="flex gap-4">
+                    <a href="/offerte/?dienst=laadpaal" class="btn-primary">Adviesgesprek</a>
+                </div>
+            </div>
+            <div
+                class="relative h-[400px] bg-white rounded-2xl shadow-xl overflow-hidden border-4 border-white"
+            >
+                <Image
+                    src={heroImage}
+                    alt="Elektrische auto laadt aan thuis laadpaal"
+                    width={800}
+                    height={600}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands & Features -->
+    <section class="py-12 border-b border-border">
+        <div class="container-custom">
+            <p
+                class="text-center text-slate-400 text-sm font-bold uppercase tracking-widest mb-6"
+            >
+                Wij werken met o.a.
+            </p>
+            <div
+                class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all"
+            >
+                <span class="text-xl font-bold text-slate-800">Alfen</span>
+                <span class="text-xl font-bold text-slate-800">Easee</span>
+                <span class="text-xl font-bold text-slate-800">Wallbox</span>
+                <span class="text-xl font-bold text-slate-800">Zappi</span>
+                <span class="text-xl font-bold text-slate-800">Tesla</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Body -->
+    <section class="py-20 bg-surface">
+        <div class="container-custom grid lg:grid-cols-3 gap-12">
+            <div class="lg:col-span-2 space-y-12">
+                <div>
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-4"
+                    >
+                        Complete Installatie
+                    </h2>
+                    <p class="text-slate-600 mb-6">
+                        Een laadpaal is meer dan alleen een stekker in de muur.
+                        Het vraagt veel vermogen van uw installatie. Wij zorgen
+                        dat u veilig kunt laden zonder dat de stoppen doorslaan
+                        als u de wasmachine aanzet (Load Balancing).
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div
+                        class="bg-surface-dark p-6 rounded-xl border border-border"
+                    >
+                        <Zap class="w-8 h-8 text-accent mb-4" />
+                        <h3 class="font-bold text-primary text-lg mb-2">
+                            1-Fase of 3-Fasen?
+                        </h3>
+                        <p class="text-sm text-slate-600">
+                            Afhankelijk van uw auto en aansluiting adviseren wij
+                            de juiste lader. Vaak is een verzwaring naar 3-fasen
+                            nodig voor sneller laden.
+                        </p>
+                    </div>
+                    <div
+                        class="bg-surface-dark p-6 rounded-xl border border-border"
+                    >
+                        <Car class="w-8 h-8 text-primary mb-4" />
+                        <h3 class="font-bold text-primary text-lg mb-2">
+                            Load Balancing
+                        </h3>
+                        <p class="text-sm text-slate-600">
+                            De lader past de snelheid automatisch aan als u in
+                            huis veel stroom gebruikt. Zo voorkomt u
+                            overbelasting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="space-y-6">
+                <!-- Price Indicaton -->
+                <div
+                    class="bg-surface-dark p-6 rounded-xl shadow-lg border border-border-dark"
+                >
+                    <h3 class="font-bold text-lg mb-4 text-primary">
+                        Indicatie Installatiekosten
+                    </h3>
+                    <ul class="space-y-4 mb-6">
+                        <li class="flex justify-between text-sm">
+                            <span class="text-slate-600"
+                                >Basis installatie (wand)</span
+                            >
+                            <span class="font-bold text-primary">€ 450,-</span>
+                        </li>
+                        <li class="flex justify-between text-sm">
+                            <span class="text-slate-600"
+                                >Graafwerk (per meter)</span
+                            >
+                            <span class="font-bold text-primary">€ 45,-</span>
+                        </li>
+                        <li class="flex justify-between text-sm">
+                            <span class="text-slate-600"
+                                >Aanpassing meterkast</span
+                            >
+                            <span class="font-bold text-primary">€ 150,-</span>
+                        </li>
+                    </ul>
+                    <p class="text-xs text-slate-400 mb-4">
+                        * Exclusief laadpaal zelf. Prijzen incl. BTW.
+                    </p>
+                    <a
+                        href="/offerte/?dienst=laadpaal"
+                        class="block w-full text-center btn-primary"
+                        >Offerte op Maat</a
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

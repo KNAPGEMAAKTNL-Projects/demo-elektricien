@@ -1,0 +1,186 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Phone, Mail, MapPin, Clock, ArrowRight } from "lucide-react";
+---
+
+<Layout title="Contact | Van der Veen Elektrotechniek">
+    <section class="bg-surface-dark py-12 md:py-20">
+        <div class="container-custom">
+            <h1
+                class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6 text-center"
+            >
+                Contact & Service
+            </h1>
+            <p
+                class="text-lg text-slate-600 text-center max-w-2xl mx-auto mb-16"
+            >
+                Heeft u een vraag of wilt u een afspraak maken? Wij zijn
+                bereikbaar via telefoon, mail en WhatsApp.
+            </p>
+
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info Card -->
+                <div
+                    class="bg-surface rounded-2xl shadow-lg p-8 md:p-12 border border-border h-full"
+                >
+                    <h2
+                        class="text-2xl font-bold font-heading text-primary mb-8"
+                    >
+                        Direct Contact
+                    </h2>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-red-50 flex items-center justify-center flex-shrink-0"
+                            >
+                                <Phone class="w-6 h-6 text-action" />
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-1"
+                                    >Voor Spoed & Afspraken</span
+                                >
+                                <a
+                                    href="tel:0612345678"
+                                    class="text-2xl md:text-3xl font-bold text-primary hover:text-action transition-colors"
+                                    >06 - 1234 5678</a
+                                >
+                                <p class="text-sm text-slate-500 mt-1">
+                                    Ma t/m Vr: 08:00 - 18:00 (Spoed 24/7)
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0"
+                            >
+                                <Mail class="w-6 h-6 text-accent" />
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-1"
+                                    >E-mail</span
+                                >
+                                <a
+                                    href="mailto:info@vanderveen-elektro.nl"
+                                    class="text-xl font-bold text-primary hover:text-accent transition-colors"
+                                    >info@vanderveen-elektro.nl</a
+                                >
+                                <p class="text-sm text-slate-500 mt-1">
+                                    Reactie binnen 24 uur
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div
+                                class="w-12 h-12 rounded-full bg-primary/5 flex items-center justify-center flex-shrink-0"
+                            >
+                                <MapPin class="w-6 h-6 text-primary" />
+                            </div>
+                            <div>
+                                <span
+                                    class="block text-sm font-bold text-slate-400 uppercase tracking-wider mb-1"
+                                    >Locatie</span
+                                >
+                                <p class="text-lg font-bold text-primary">
+                                    Culemborg & Omstreken
+                                </p>
+                                <p class="text-sm text-slate-500 mt-1">
+                                    Wij werken in een straal van 20km rondom
+                                    Culemborg (o.a. Beusichem, Geldermalsen,
+                                    Tiel, Houten).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="mt-12 p-6 bg-surface-dark rounded-xl border border-border-dark"
+                    >
+                        <h3
+                            class="font-bold text-primary mb-2 flex items-center gap-2"
+                        >
+                            <Clock class="w-5 h-5 text-accent" />
+                            Openingstijden
+                        </h3>
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div>
+                                <p class="text-slate-500">Maandag - Vrijdag</p>
+                                <p class="font-medium text-slate-700">
+                                    08:00 - 18:00
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500">Zaterdag</p>
+                                <p class="font-medium text-slate-700">
+                                    09:00 - 16:00
+                                </p>
+                            </div>
+                            <div>
+                                <p class="text-slate-500">Zondag</p>
+                                <p class="font-medium text-slate-700">
+                                    Gesloten (Wel spoed)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form / Map Column -->
+                <div class="flex flex-col gap-6">
+                    <!-- Simple Contact Form Placeholder -->
+                    <div
+                        class="bg-surface rounded-2xl shadow-lg p-8 md:p-12 border border-border flex-grow"
+                    >
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-6"
+                        >
+                            Stuur een bericht
+                        </h2>
+                        <form class="space-y-4">
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-slate-700 mb-1"
+                                    >Naam</label
+                                >
+                                <input
+                                    type="text"
+                                    class="w-full px-4 py-3 rounded-lg border border-border-dark focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all"
+                                    placeholder="Uw naam"
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-slate-700 mb-1"
+                                    >Telefoonnummer</label
+                                >
+                                <input
+                                    type="tel"
+                                    class="w-full px-4 py-3 rounded-lg border border-border-dark focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all"
+                                    placeholder="06..."
+                                />
+                            </div>
+                            <div>
+                                <label
+                                    class="block text-sm font-medium text-slate-700 mb-1"
+                                    >Bericht</label
+                                >
+                                <textarea
+                                    rows="4"
+                                    class="w-full px-4 py-3 rounded-lg border border-border-dark focus:ring-2 focus:ring-accent focus:border-accent outline-none transition-all"
+                                    placeholder="Waar kunnen we u mee helpen?"
+                                ></textarea>
+                            </div>
+                            <button class="w-full btn-primary mt-4"
+                                >Verstuur Bericht</button
+                            >
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</Layout>

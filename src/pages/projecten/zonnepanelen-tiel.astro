@@ -1,0 +1,190 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ContactCta from "../../components/ContactCta.astro";
+import { MapPin, Calendar, Clock, CheckCircle, ArrowLeft } from "lucide-react";
+import { Image } from "astro:assets";
+import heroImage from "../../assets/images/electrician-installing-solar-panels.webp";
+---
+
+<Layout title="Zonnepanelen Aansluiting Tiel | Van der Veen Elektrotechniek">
+    <section class="bg-surface-dark pt-32 pb-8">
+        <div class="container-custom">
+            <a
+                href="/projecten/"
+                class="inline-flex items-center text-slate-500 hover:text-primary mb-6 transition-colors"
+            >
+                <ArrowLeft className="w-4 h-4 mr-2" />
+                Terug naar projecten
+            </a>
+            <div class="flex items-center gap-3 mb-4">
+                <div
+                    class="bg-primary/90 backdrop-blur-md px-4 py-1.5 rounded-full text-xs font-bold text-white uppercase tracking-wider"
+                >
+                    Duurzaam
+                </div>
+                <div class="flex items-center gap-2 text-slate-400 text-sm">
+                    <MapPin className="w-4 h-4" />
+                    <span>Tiel</span>
+                </div>
+            </div>
+            <h1
+                class="text-4xl md:text-5xl font-bold font-heading text-primary mb-6"
+            >
+                Aansluiting Zonnepaneel Systeem
+            </h1>
+            <p class="text-lg text-slate-600 max-w-3xl">
+                Veilige aansluiting van de omvormer op een vrije groep, inclusief
+                werkschakelaar en monitoring module.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12 bg-surface border-b border-border">
+        <div class="container-custom">
+            <div class="aspect-[21/9] rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                    src={heroImage}
+                    alt="Zonnepanelen omvormer aansluiting Tiel"
+                    width={1200}
+                    height={514}
+                    loading="eager"
+                    fetchpriority="high"
+                    decoding="async"
+                    class="w-full h-full object-cover"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-surface">
+        <div class="container-custom">
+            <div class="grid lg:grid-cols-3 gap-12">
+                <div class="lg:col-span-2 space-y-8">
+                    <div>
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-4"
+                        >
+                            De situatie
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed mb-4">
+                            Een installateur had 12 zonnepanelen op het dak
+                            gelegd, maar voor de elektrische aansluiting werd
+                            een erkend elektricien gezocht. De klant wilde de
+                            aansluiting netjes en veilig uitgevoerd hebben, met
+                            de mogelijkheid om de opbrengst te monitoren.
+                        </p>
+                        <p class="text-slate-600 leading-relaxed">
+                            De bestaande groepenkast was gelukkig recent
+                            vernieuwd en had nog een vrije groep beschikbaar.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-4"
+                        >
+                            Onze oplossing
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed mb-6">
+                            We hebben de omvormer vakkundig aangesloten volgens
+                            de geldende normen. Een werkschakelaar zorgt ervoor
+                            dat het systeem veilig kan worden uitgeschakeld voor
+                            onderhoud.
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >Aansluiting omvormer op vrije groep</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >Werkschakelaar naast omvormer</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >P1-poort aansluiting voor monitoring</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <CheckCircle
+                                    className="w-5 h-5 text-accent mt-0.5 flex-shrink-0"
+                                />
+                                <span class="text-slate-600"
+                                    >NEN 1010 conforme installatie</span
+                                >
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h2
+                            class="text-2xl font-bold font-heading text-primary mb-4"
+                        >
+                            Het resultaat
+                        </h2>
+                        <p class="text-slate-600 leading-relaxed">
+                            Het zonnepanelensysteem draait nu veilig en de klant
+                            kan via de app precies zien hoeveel energie er wordt
+                            opgewekt. De verwachte opbrengst is circa 3.600 kWh
+                            per jaar, goed voor een flinke besparing op de
+                            energierekening.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <div
+                        class="bg-surface-dark p-6 rounded-xl border border-border"
+                    >
+                        <h3 class="font-bold text-primary mb-4">
+                            Projectgegevens
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-3 text-sm">
+                                <MapPin className="w-4 h-4 text-slate-400" />
+                                <span class="text-slate-600">Tiel</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <Calendar className="w-4 h-4 text-slate-400" />
+                                <span class="text-slate-600">Augustus 2024</span
+                                >
+                            </li>
+                            <li class="flex items-center gap-3 text-sm">
+                                <Clock className="w-4 h-4 text-slate-400" />
+                                <span class="text-slate-600">Halve werkdag</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-primary text-white p-6 rounded-xl">
+                        <h3 class="font-bold text-lg mb-3">
+                            Zonnepanelen laten aansluiten?
+                        </h3>
+                        <p class="text-white/80 text-sm mb-4">
+                            Wij verzorgen de veilige aansluiting van uw
+                            omvormer conform alle normen.
+                        </p>
+                        <a
+                            href="/contact/"
+                            class="block w-full text-center bg-accent hover:bg-accent-light text-white font-bold py-3 rounded-lg transition-colors"
+                            >Gratis adviesgesprek</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <ContactCta />
+</Layout>

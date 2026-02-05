@@ -1,0 +1,302 @@
+---
+import "../styles/global.css";
+
+interface Props {
+    title: string;
+    description?: string;
+}
+
+const {
+    title,
+    description = "Van der Veen Elektrotechniek - Uw betrouwbare elektricien in Culemborg. 24/7 Spoedhulp, Groepenkasten en Duurzame Installaties.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="nl" class="scroll-smooth">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body class="bg-surface text-text antialiased flex flex-col min-h-screen">
+        <header
+            class="sticky top-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-border shadow-sm transition-all duration-300"
+        >
+            <!-- Todo: Header Component -->
+            <div
+                class="container-custom h-20 flex items-center justify-between"
+            >
+                <a
+                    href="/"
+                    class="text-2xl font-bold font-heading text-primary"
+                >
+                    Van der Veen<span class="text-accent">.</span>
+                </a>
+                <nav class="hidden md:flex gap-8 items-center">
+                    <div class="relative group">
+                        <button
+                            class="text-sm font-medium text-slate-600 hover:text-primary transition-colors flex items-center gap-1 py-4"
+                        >
+                            Diensten
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="12"
+                                height="12"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                ><path d="m6 9 6 6 6-6"></path></svg
+                            >
+                        </button>
+                        <!-- Dropdown -->
+                        <div
+                            class="absolute top-full left-0 w-64 bg-surface shadow-xl rounded-xl py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform translate-y-2 group-hover:translate-y-0 border border-border"
+                        >
+                            <a
+                                href="/diensten/groepenkast/"
+                                class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary"
+                                >Groepenkast Vervangen</a
+                            >
+                            <a
+                                href="/diensten/laadpaal/"
+                                class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary"
+                                >Laadpaal Installatie</a
+                            >
+                            <a
+                                href="/diensten/renovatie/"
+                                class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary"
+                                >Elektra Renovatie</a
+                            >
+                            <a
+                                href="/diensten/verlichting/"
+                                class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary"
+                                >Verlichting & Lichtplan</a
+                            >
+                            <a
+                                href="/diensten/zonnepanelen/"
+                                class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary"
+                                >Zonnepanelen & Omvormer</a
+                            >
+                            <a
+                                href="/diensten/inductie/"
+                                class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-primary"
+                                >Inductie & Kookgroep</a
+                            >
+                        </div>
+                    </div>
+                    <a
+                        href="/projecten/"
+                        class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        >Projecten</a
+                    >
+                    <a
+                        href="/over-ons/"
+                        class="text-sm font-medium text-slate-600 hover:text-primary transition-colors"
+                        >Over Ons</a
+                    >
+                    <a
+                        href="/offerte/"
+                        class="btn-primary py-2 px-4 shadow-none"
+                        >Offerte Aanvragen</a
+                    >
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-grow">
+            <slot />
+        </main>
+
+        <footer class="bg-primary text-slate-300 py-12 mt-auto">
+            <!-- Todo: Footer Component -->
+            <div
+                class="container-custom grid grid-cols-1 md:grid-cols-4 gap-12"
+            >
+                <div class="col-span-1 md:col-span-1">
+                    <h3 class="text-white font-heading font-bold text-xl mb-4">
+                        Van der Veen<span class="text-accent">.</span>
+                    </h3>
+                    <p class="text-sm leading-relaxed mb-4">
+                        Uw lokale vakman voor elektrotechniek in Culemborg en
+                        omstreken. Eerlijk, deskundig en altijd dichtbij.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Diensten</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a
+                                href="/diensten/groepenkast/"
+                                class="hover:text-white transition-colors"
+                                >Groepenkast Vervangen</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/diensten/laadpaal/"
+                                class="hover:text-white transition-colors"
+                                >Laadpaal Installatie</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/diensten/renovatie/"
+                                class="hover:text-white transition-colors"
+                                >Elektra Renovatie</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/diensten/verlichting/"
+                                class="hover:text-white transition-colors"
+                                >Verlichting Advies</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/diensten/zonnepanelen/"
+                                class="hover:text-white transition-colors"
+                                >Zonnepanelen Aansluiten</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/diensten/inductie/"
+                                class="hover:text-white transition-colors"
+                                >Kookgroep & Perilex</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Snel naar</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li>
+                            <a
+                                href="/"
+                                class="hover:text-white transition-colors"
+                                >Home</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/projecten/"
+                                class="hover:text-white transition-colors"
+                                >Onze Projecten</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/over-ons/"
+                                class="hover:text-white transition-colors"
+                                >Over Ons</a
+                            >
+                        </li>
+                        <li>
+                            <a
+                                href="/contact/"
+                                class="hover:text-white transition-colors"
+                                >Contact</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li class="flex items-start gap-2">
+                            <span>Adres:</span>
+                            <span class="text-white"
+                                >Beesdseweg 1<br />4104 AW Culemborg</span
+                            >
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span>Bel:</span>
+                            <a
+                                href="tel:0612345678"
+                                class="text-white font-bold hover:text-accent"
+                                >06 - 1234 5678</a
+                            >
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <span>Mail:</span>
+                            <a
+                                href="mailto:info@vanderveen.nl"
+                                class="text-white hover:text-accent"
+                                >info@vanderveen.nl</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="container-custom mt-12 pt-8 border-t border-slate-800 text-xs text-slate-500 flex flex-col md:flex-row justify-between items-center"
+            >
+                <p>
+                    &copy; {new Date().getFullYear()} Van der Veen Elektrotechniek.
+                    Gemaakt door <a href="https://knapgemaakt.nl/website-laten-maken/" target="_blank" rel="noopener" class="text-slate-400 hover:text-white transition-colors">KNAP GEMAAKT.</a>
+                </p>
+                <p>KvK: 12345678 | BTW: NL123456789B01</p>
+            </div>
+
+            <!-- Mobile Sticky Bar (Visible only on mobile) -->
+            <div
+                class="fixed bottom-0 left-0 right-0 bg-surface border-t border-border-dark p-4 md:hidden z-50 flex gap-4 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]"
+            >
+                <a
+                    href="tel:0612345678"
+                    class="flex-1 bg-action text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-transform"
+                >
+                    <!-- Phone Icon -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><path
+                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                        ></path></svg
+                    >
+                    Bel Direct
+                </a>
+                <a
+                    href="https://wa.me/31612345678"
+                    class="flex-1 bg-whatsapp text-white font-medium py-3 rounded-lg flex items-center justify-center gap-2 shadow-sm active:scale-95 transition-transform"
+                >
+                    <!-- Whatsapp Icon -->
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        ><circle cx="12" cy="12" r="10"></circle><path
+                            d="M16.9 16.9c-1.1 1.1-2.5 1.8-4 1.8-1.5 0-2.9-.7-4-1.8-1.1-1.1-1.8-2.5-1.8-4 0-1.5.7-2.9 1.8-4 1.1-1.1 2.5-1.8 4-1.8 1.5 0 2.9.7 4 1.8 1.1 1.1 1.8 2.5 1.8 4 0 1.5-.7 2.9-1.8 4z"
+                        ></path><path d="M8.5 8.5l7 7"></path></svg
+                    >
+                    Whatsapp
+                </a>
+            </div>
+        </footer>
+    </body>
+</html>
