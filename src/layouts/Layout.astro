@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import MobileNav from "../components/MobileNav";
 
 interface Props {
     title: string;
@@ -36,6 +37,9 @@ const {
                 >
                     Van der Veen<span class="text-accent">.</span>
                 </a>
+                <div class="md:hidden">
+                    <MobileNav client:load />
+                </div>
                 <nav class="hidden md:flex gap-8 items-center">
                     <div class="relative group">
                         <button
